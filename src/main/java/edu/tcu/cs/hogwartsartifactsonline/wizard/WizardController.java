@@ -59,7 +59,7 @@ public class WizardController {
     }
 
     @DeleteMapping("/{wizardId}")
-    public Result deleteWizard(Integer wizardId) {
+    public Result deleteWizard(@PathVariable Integer wizardId) {
         this.wizardService.delete(wizardId);
         return new Result(true, StatusCode.SUCCESS, "Delete Success");
     }
